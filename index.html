@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PartShop | Achados Selecionados & Ofertas VIP</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+  
+  <link rel="icon" type="image/png" href="images/partshop_logo.png">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              dark: '#0d0e12',
+              card: '#161822',
+              hover: '#1e2130',
+              border: '#292d3e',
+              accent: '#7c3aed',
+              accentGlow: '#a855f7',
+              gold: '#f59e0b',
+              emerald: '#10b981',
+              shopee: '#ee4d2d'
+            }
+          }
+        }
+      }
+    };
+  </script>
+	
+	<link rel="stylesheet" href="lib/style.css">
+	<link rel="stylesheet" href="lib/particles.css">
+
+</head>
+<body class="min-h-screen flex flex-col font-sans selection:bg-purple-600 selection:text-white">
+
+  <!-- TOPO / BANNER DE ALERTAS -->
+  <aside aria-label="Avisos" class="bg-gradient-to-r from-purple-950 via-brand-dark to-orange-950/70 border-b border-brand-border/60 text-xs py-2 px-4 text-center font-medium text-gray-300 flex items-center justify-center gap-2">
+    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30 animate-pulse">
+      LIVE VIP
+    </span>
+    <span>🔥 Cupons da Shopee atualizados hoje! Preços sujeitos a alteração no aplicativo.</span>
+  </aside>
+
+  <!-- CABEÇALHO PRINCIPAL -->
+  <header class="sticky top-0 z-40 glass-nav border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      
+      <div class="flex items-center gap-3">
+        <img 
+		  src="images/partshop_logo.png" 
+		  alt="PartShop Logo" 
+		  class="w-11 h-11 object-contain"
+		>
+        <div>
+          <div class="flex items-center gap-2">
+            <h1 class="font-display font-extrabold text-xl sm:text-2xl tracking-tight text-white">PartShop</h1>
+            <span class="px-1.5 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider bg-purple-500/10 text-purple-400 border border-purple-500/30">Oficial</span>
+          </div>
+          <p class="text-xs text-gray-400 hidden sm:block">@partshop_ms_oficial • Curadoria de Melhores Ofertas</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2 sm:gap-3">
+        <a href="#vip-channels" class="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-xs sm:text-sm font-semibold px-3 sm:px-4 py-2.5 rounded-xl shadow-lg shadow-emerald-950/40 transition-all duration-200">
+          <i data-lucide="bell" class="w-4 h-4"></i>
+          <span class="hidden sm:inline">Grupo de Cupons VIP</span>
+          <span class="sm:hidden">Cupons VIP</span>
+        </a>
+
+<!--ESTE BOTAO SERA PARA CONFIGURAÇÕES DO SITE NA VISAO DO CLIENTE. AJUSTES DE COR CLARO E ESCURO E OUTROS.
+        <button onclick="toggleConfigModal()" title="Gerenciar Catálogo JSON" class="p-2.5 rounded-xl bg-brand-card hover:bg-brand-hover border border-brand-border text-gray-300 hover:text-white transition">
+          <i data-lucide="settings" class="w-5 h-5"></i>
+        </button>
+-->
+
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative overflow-hidden pt-8 pb-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+    <div class="rounded-3xl p-6 sm:p-10 relative overflow-hidden bg-gradient-to-b from-brand-card to-brand-dark border border-brand-border">
+      <!-- Orbes Fluidos em Movimento -->
+      <div class="ambient-glow ambient-glow-purple"></div>
+      <div class="ambient-glow ambient-glow-orange"></div>
+
+      <!-- Canvas das Micropartículas Voadoras -->
+      <canvas id="heroParticles" class="hero-particle-canvas"></canvas>
+	  
+      <div class="max-w-2xl relative z-10">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-brand-border/60 text-purple-300 border border-purple-500/30 mb-4">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-400"></i>
+          Produtos Verificados com Garantia Shopee
+        </div>
+        <h2 class="font-display text-3xl sm:text-4xl font-black text-white tracking-tight leading-tight mb-3">
+          Achados Práticos para Casa, Conforto & Bem-Estar
+        </h2>
+        <p class="text-sm sm:text-base text-gray-400 leading-relaxed mb-6">
+          Curadoria focada em utilidades domésticas, organização e cuidados pessoais com as melhores avaliações da plataforma.
+        </p>
+
+        <div class="flex items-center gap-2 text-xs text-amber-300/90 bg-amber-500/10 border border-amber-500/20 px-3.5 py-2 rounded-xl">
+          <i data-lucide="info" class="w-4 h-4 flex-shrink-0 text-amber-400"></i>
+          <span><strong>Dica:</strong> Toque no botão do produto para abrir o app oficial da Shopee e resgatar frete grátis e cupons ativos.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTROLES: BUSCA, FILTROS E ORDENAÇÃO -->
+  <section class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-4">
+    <div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 bg-brand-card p-3 sm:p-4 rounded-2xl border border-brand-border">
+      
+      <div class="relative flex-1">
+        <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400"></i>
+        <input 
+          type="text" 
+          id="searchInput" 
+          placeholder="Buscar produtos, organizadores, utilidades..." 
+          class="w-full bg-brand-dark border border-brand-border rounded-xl pl-10 pr-4 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 transition"
+          oninput="handleSearch()"
+        >
+      </div>
+
+      <!-- Filtro de Ordenação Estilizado -->
+		<div class="flex items-center gap-2">
+		  <span class="text-xs text-gray-400 font-medium whitespace-nowrap">Ordenar:</span>
+		  <div class="relative inline-block">
+			<select 
+			  id="sortSelect" 
+			  class="appearance-none bg-brand-dark text-gray-200 border border-brand-border rounded-xl pl-3.5 pr-9 py-2 text-xs font-medium focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition cursor-pointer hover:border-gray-600 shadow-sm"
+			  onchange="handleSort()"
+			>
+			  <option value="relevance" class="bg-[#161822] text-gray-200 py-1.5">Mais Vendidos</option>
+			  <option value="price-asc" class="bg-[#161822] text-gray-200 py-1.5">Menor Preço</option>
+			  <option value="price-desc" class="bg-[#161822] text-gray-200 py-1.5">Maior Preço</option>
+			  <option value="rating" class="bg-[#161822] text-gray-200 py-1.5">Melhor Avaliados</option>
+			</select>
+			<!-- Ícone de Seta Discreta SVG -->
+			<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2.5 text-gray-400">
+			  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+			  </svg>
+			</div>
+		  </div>
+		</div>
+    </div>
+
+    <nav aria-label="Categorias de produtos" class="flex items-center gap-2 overflow-x-auto custom-scrollbar py-3 mt-2" id="categoryChips">
+    </nav>
+  </section>
+
+  <!-- GRADE DE PRODUTOS -->
+  <main class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6 flex-1">
+    <div class="flex items-center justify-between mb-6">
+      <div class="flex items-center gap-2">
+        <h3 class="font-bold text-lg text-white" id="productsCountTitle">Carregando catálogo...</h3>
+        <span id="activeFilterBadge" class="hidden text-xs bg-purple-900/50 text-purple-300 border border-purple-500/30 px-2.5 py-0.5 rounded-full"></span>
+      </div>
+      <span class="text-xs text-gray-500 flex items-center gap-1">
+        <i data-lucide="refresh-cw" class="w-3 h-3 text-emerald-400"></i> Atualizado em tempo real
+      </span>
+    </div>
+
+    <!-- Container dos Cards -->
+    <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+    </div>
+
+    <!-- Botão Carregar Mais (Paginação sob Demanda) -->
+    <div id="loadMoreContainer" class="mt-10 text-center hidden">
+      <button 
+        id="btnLoadMore" 
+        onclick="loadMoreProducts()" 
+        class="inline-flex items-center gap-2 px-8 py-3.5 bg-brand-card hover:bg-brand-hover border border-brand-border hover:border-purple-500/50 text-white rounded-2xl text-sm font-bold shadow-xl transition-all duration-200 active:scale-95"
+      >
+        <i data-lucide="arrow-down" class="w-4 h-4 text-purple-400"></i>
+        <span>Carregar Mais Produtos</span>
+      </button>
+      <p id="pageCounterText" class="text-xs text-gray-500 mt-2"></p>
+    </div>
+
+    <!-- Nenhum Produto Encontrado -->
+    <div id="emptyState" class="hidden text-center py-20 bg-brand-card/40 rounded-3xl border border-brand-border/60">
+      <i data-lucide="package-search" class="w-12 h-12 mx-auto text-gray-600 mb-3"></i>
+      <h4 class="text-lg font-bold text-gray-300">Nenhum produto ativo encontrado</h4>
+      <p class="text-sm text-gray-500 mt-1">Verifique o termo buscado ou limpe os filtros de categoria.</p>
+      <button onclick="resetFilters()" class="mt-4 px-4 py-2 bg-purple-600 hover:bg-purple-500 text-white rounded-xl text-xs font-semibold transition">
+        Ver Todos os Produtos
+      </button>
+    </div>
+  </main>
+
+  <!-- VIP CHANNELS -->
+  <section id="vip-channels" class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-10">
+    <div class="rounded-3xl p-8 bg-gradient-to-r from-purple-950/80 via-brand-card to-emerald-950/40 border border-purple-500/30 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
+      <div class="space-y-2 text-center md:text-left">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+          <i data-lucide="zap" class="w-3.5 h-3.5"></i>
+          CANAL OFICIAL DE CUPONS
+        </span>
+        <h3 class="text-2xl font-black text-white">Receba Cupons Relâmpago e Frete Grátis</h3>
+        <p class="text-sm text-gray-400 max-w-xl">
+          Ofertas de 50%, 70% e cupons especiais esgotam rapidamente. Participe dos grupos de transmissão para ser avisada primeiro.
+        </p>
+      </div>
+      <div class="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
+        <a href="https://whatsapp.com" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm px-6 py-3.5 rounded-2xl shadow-lg transition">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          Entrar no WhatsApp VIP
+        </a>
+        <a href="https://t.me" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-sky-600 hover:bg-sky-500 text-white font-bold text-sm px-6 py-3.5 rounded-2xl shadow-lg transition">
+          <i data-lucide="send" class="w-4 h-4"></i>
+          Canal do Telegram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="border-t border-brand-border bg-brand-dark py-10 px-4 sm:px-6 lg:px-8 text-xs text-gray-500">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <img 
+		  src="images/partshop_logo.png" 
+		  alt="PartShop Logo" 
+		  class="w-11 h-11 object-contain"
+		>
+        <div>
+          <p class="font-bold text-gray-300">PartShop Oficial (@partshop_ms_oficial)</p>
+          <p class="text-[11px] text-gray-500">Curadoria independente e programa oficial de afiliados.</p>
+        </div>
+      </div>
+      <div class="text-center md:text-right max-w-xl leading-relaxed text-[11px]">
+        <p><strong>Aviso de Transparência:</strong> Como participante do Programa de Afiliados Shopee, podemos receber comissões por compras qualificadas através dos links indicados, sem custo adicional para o comprador.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TOAST -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-emerald-600 text-white px-4 py-3 rounded-2xl shadow-2xl flex items-center gap-3 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
+    <i data-lucide="check-circle" class="w-5 h-5 text-white"></i>
+    <span class="text-xs font-semibold" id="toastMessage">Link copiado com sucesso!</span>
+  </div>
+
+  <!-- MODAL GESTÃO JSON -->
+  <div id="configModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-brand-card border border-brand-border w-full max-w-3xl rounded-3xl p-6 shadow-2xl flex flex-col max-h-[90vh]">
+      <div class="flex items-center justify-between pb-4 border-b border-brand-border">
+        <div>
+          <h3 class="font-bold text-lg text-white flex items-center gap-2">
+            <i data-lucide="database" class="w-5 h-5 text-purple-400"></i>
+            Gestão do Catálogo PartShop (JSON)
+          </h3>
+          <p class="text-xs text-gray-400">Edite a flag "ativo: true/false", valores ou links sem precisar reprogramar.</p>
+        </div>
+        <button onclick="toggleConfigModal()" class="text-gray-400 hover:text-white p-1 rounded-lg">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="py-4 flex-1 flex flex-col min-h-0">
+        <textarea id="jsonEditor" class="w-full flex-1 bg-brand-dark font-mono text-xs text-purple-300 p-4 rounded-xl border border-brand-border focus:outline-none focus:border-purple-500 custom-scrollbar resize-none"></textarea>
+      </div>
+
+      <div class="flex items-center justify-between pt-4 border-t border-brand-border gap-3">
+        <button onclick="resetDefaultProducts()" class="px-3 py-2 text-xs font-medium text-gray-400 hover:text-red-400 transition">
+          Restaurar Padrão
+        </button>
+        <div class="flex items-center gap-2">
+          <button onclick="toggleConfigModal()" class="px-4 py-2 text-xs font-semibold text-gray-300 bg-brand-hover hover:bg-brand-border rounded-xl transition">
+            Cancelar
+          </button>
+          <button onclick="saveJsonConfig()" class="px-5 py-2 text-xs font-bold text-white bg-purple-600 hover:bg-purple-500 rounded-xl shadow-lg transition">
+            Salvar e Atualizar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INJEÇÃO DOS ARQUIVOS EXTERNOS -->
+  <script src="lib/produtos.js"></script>
+  <script src="lib/app.js"></script>
+  <script src="lib/particles.js"></script>
+</body>
+</html>

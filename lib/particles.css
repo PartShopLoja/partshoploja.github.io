@@ -1,0 +1,65 @@
+/* ==========================================================================
+   PARTSHOP AMBIENT & PARTICLES ENGINE
+   ========================================================================== */
+
+.hero-particle-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Orbes de luz líquida em segundo plano */
+.ambient-glow {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(80px);
+  pointer-events: none;
+  opacity: 0.18;
+  mix-blend-mode: screen;
+  will-change: transform;
+}
+
+.ambient-glow-purple {
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, #8b5cf6 0%, rgba(139, 92, 246, 0) 70%);
+  top: -100px;
+  right: -80px;
+  animation: floatPurple 14s ease-in-out infinite alternate;
+}
+
+.ambient-glow-orange {
+  width: 340px;
+  height: 340px;
+  background: radial-gradient(circle, #ee4d2d 0%, rgba(238, 77, 45, 0) 70%);
+  bottom: -90px;
+  left: -70px;
+  animation: floatOrange 18s ease-in-out infinite alternate;
+}
+
+@keyframes floatPurple {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-60px, 40px) scale(1.15);
+  }
+  100% {
+    transform: translate(30px, 70px) scale(0.9);
+  }
+}
+
+@keyframes floatOrange {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(70px, -40px) scale(1.2);
+  }
+  100% {
+    transform: translate(-30px, -60px) scale(0.95);
+  }
+}
