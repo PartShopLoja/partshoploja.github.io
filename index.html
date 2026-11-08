@@ -93,41 +93,41 @@
 <body class="min-h-screen flex flex-col font-sans selection:bg-purple-600 selection:text-white">
 
   <!-- TOPO / BANNER DE ALERTAS -->
-  <aside aria-label="Avisos" class="bg-gradient-to-r from-purple-950 via-brand-dark to-orange-950/70 border-b border-brand-border/60 text-xs py-2 px-4 text-center font-medium text-gray-300 flex items-center justify-center gap-2">
-    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30 animate-pulse">
+  <aside aria-label="Avisos" class="bg-gradient-to-r from-purple-950 via-brand-dark to-orange-950/70 border-b border-brand-border/60 text-xs py-2 px-3 sm:px-4 text-center font-medium text-gray-300 flex items-center justify-center gap-1.5 sm:gap-2">
+    <span class="inline-flex items-center px-1.5 sm:px-2 py-0.5 rounded-full text-[9px] sm:text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30 animate-pulse">
       LIVE VIP
     </span>
-    <span>🔥 Cupons da Shopee atualizados hoje! Preços sujeitos a alteração no aplicativo.</span>
+    <span class="text-[11px] sm:text-xs">🔥 Cupons Shopee atualizados hoje! <span class="hidden sm:inline">Preços sujeitos a alteração no aplicativo.</span></span>
   </aside>
 
   <!-- CABEÇALHO PRINCIPAL -->
   <header class="sticky top-0 z-40 glass-nav border-b border-brand-border">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-3 sm:gap-4">
       
-      <div class="flex items-center gap-3">
+      <div class="flex items-center gap-2.5 sm:gap-3">
         <img 
 		  src="images/partshop_logo.png" 
 		  alt="PartShop Logo" 
-		  class="w-11 h-11 object-contain"
+		  class="w-9 h-9 sm:w-11 sm:h-11 object-contain"
 		>
         <div>
-          <div class="flex items-center gap-2">
-            <h1 class="font-display font-extrabold text-xl sm:text-2xl tracking-tight text-white">PartShop</h1>
-            <span class="px-1.5 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider bg-purple-500/10 text-purple-400 border border-purple-500/30">Oficial</span>
+          <div class="flex items-center gap-1.5 sm:gap-2">
+            <h1 class="font-display font-extrabold text-lg sm:text-2xl tracking-tight text-white">PartShop</h1>
+            <span class="px-1.5 py-0.5 rounded text-[9px] sm:text-[10px] uppercase font-bold tracking-wider bg-purple-500/10 text-purple-400 border border-purple-500/30">Oficial</span>
           </div>
-          <p class="text-xs text-gray-400 hidden sm:block">@partshop_ms_oficial • Curadoria de Melhores Ofertas</p>
+          <p class="text-[11px] text-gray-400 hidden sm:block">@partshop_ms_oficial • Curadoria de Melhores Ofertas</p>
         </div>
       </div>
 
       <div class="flex items-center gap-2 sm:gap-3">
         <!-- Botão Cupons VIP com Link Direto Shopee -->
         <a 
-          href="https://s.shopee.com.br/80E2KGMco6" 
+          href="https://s.shopee.com.br/8fTlBBTm0Q" 
           target="_blank" 
           rel="noopener noreferrer" 
-          class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white text-xs sm:text-sm font-semibold px-3.5 sm:px-4 py-2.5 rounded-xl shadow-lg shadow-purple-950/40 transition-all duration-200"
+          class="inline-flex items-center gap-1.5 sm:gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white text-xs sm:text-sm font-semibold px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl shadow-lg shadow-purple-950/40 transition-all duration-200"
         >
-          <i data-lucide="gift" class="w-4 h-4"></i>
+          <i data-lucide="gift" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
           <span class="hidden sm:inline">Resgatar Cupons VIP</span>
           <span class="sm:hidden">Cupons VIP</span>
         </a>
@@ -136,8 +136,8 @@
   </header>
 
   <!-- HERO SECTION -->
-  <section class="relative overflow-hidden pt-8 pb-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
-    <div class="rounded-3xl p-6 sm:p-10 relative overflow-hidden bg-gradient-to-b from-brand-card to-brand-dark border border-brand-border">
+  <section class="relative overflow-hidden pt-4 sm:pt-8 pb-3 sm:pb-6 px-3 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+    <div class="rounded-2xl sm:rounded-3xl p-4 sm:p-10 relative overflow-hidden bg-gradient-to-b from-brand-card to-brand-dark border border-brand-border">
       <!-- Orbes Fluidos em Movimento -->
       <div class="ambient-glow ambient-glow-purple"></div>
       <div class="ambient-glow ambient-glow-orange"></div>
@@ -146,83 +146,86 @@
       <canvas id="heroParticles" class="hero-particle-canvas"></canvas>
 	  
       <div class="max-w-2xl relative z-10">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-brand-border/60 text-purple-300 border border-purple-500/30 mb-4">
-          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-400"></i>
+        <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full text-[11px] sm:text-xs font-semibold bg-brand-border/60 text-purple-300 border border-purple-500/30 mb-2.5 sm:mb-4">
+          <i data-lucide="shield-check" class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-emerald-400"></i>
           Produtos Verificados com Garantia Shopee
         </div>
-        <h2 class="font-display text-3xl sm:text-4xl font-black text-white tracking-tight leading-tight mb-3">
+        <h2 class="font-display text-2xl sm:text-4xl font-black text-white tracking-tight leading-tight mb-2 sm:mb-3">
           Achados Práticos para Casa, Conforto & Bem-Estar
         </h2>
-        <p class="text-sm sm:text-base text-gray-400 leading-relaxed mb-6">
+        <p class="text-xs sm:text-base text-gray-400 leading-relaxed mb-4 sm:mb-6">
           Curadoria focada em utilidades domésticas, organização e cuidados pessoais com as melhores avaliações da plataforma.
         </p>
 
         <!-- Botões de Ação com os Links Parametrizados -->
-        <div class="flex flex-wrap gap-3 mb-6">
+        <div class="grid grid-cols-3 gap-2 sm:flex sm:flex-wrap sm:gap-3 mb-3.5 sm:mb-6">
           <a 
-            href="https://s.shopee.com.br/80E2KGMco6" 
+            href="https://s.shopee.com.br/8fTlAeTyOD" 
             target="_blank" 
             rel="noopener noreferrer"
-            class="px-6 py-3 rounded-xl text-sm font-bold bg-brand-accent hover:bg-violet-600 text-white transition shadow-lg shadow-violet-500/25 flex items-center gap-2"
+            class="px-2 sm:px-6 py-2.5 sm:py-3 rounded-xl text-xs sm:text-sm font-bold bg-brand-accent hover:bg-violet-600 text-white transition shadow-lg shadow-violet-500/25 flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 text-center"
           >
-            <i data-lucide="ticket" class="w-4 h-4"></i>
-            <span>Pegar Cupons Diários</span>
+            <i data-lucide="ticket" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+            <span>Cupons Diários</span>
           </a>
 
           <a 
             href="https://s.shopee.com.br/8AXSWZLzT9" 
             target="_blank" 
             rel="noopener noreferrer"
-            class="px-5 py-3 rounded-xl text-sm font-semibold bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:bg-white/10 transition flex items-center gap-2"
+            class="px-2 sm:px-5 py-2.5 sm:py-3 rounded-xl text-xs sm:text-sm font-semibold bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:bg-white/10 transition flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 text-center"
           >
-            <i data-lucide="truck" class="w-4 h-4 text-emerald-400"></i>
-            <span>Frete Grátis Shopee</span>
+            <i data-lucide="truck" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-400"></i>
+            <span>Frete Grátis</span>
           </a>
 
           <a 
-            href="https://s.shopee.com.br/906ZW6IomK" 
+            href="https://s.shopee.com.br/3LSEp8TsJI" 
             target="_blank" 
             rel="noopener noreferrer"
-            class="px-5 py-3 rounded-xl text-sm font-semibold bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:bg-white/10 transition flex items-center gap-2"
+            class="px-2 sm:px-5 py-2.5 sm:py-3 rounded-xl text-xs sm:text-sm font-semibold bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:bg-white/10 transition flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 text-center"
           >
-            <i data-lucide="zap" class="w-4 h-4 text-amber-400"></i>
-            <span>Ofertas Relâmpago</span>
+            <i data-lucide="zap" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400"></i>
+            <span>Ofertas Flash</span>
           </a>
         </div>
 
-        <div class="flex items-center gap-2 text-xs text-amber-300/90 bg-amber-500/10 border border-amber-500/20 px-3.5 py-2 rounded-xl">
-          <i data-lucide="info" class="w-4 h-4 flex-shrink-0 text-amber-400"></i>
-          <span><strong>Dica:</strong> Toque no botão do produto para abrir o app oficial da Shopee e resgatar frete grátis e cupons ativos.</span>
+        <div class="flex items-center gap-2 text-[11px] sm:text-xs text-amber-300/90 bg-amber-500/10 border border-amber-500/20 px-3 py-2 rounded-xl">
+          <i data-lucide="info" class="w-3.5 h-3.5 flex-shrink-0 text-amber-400"></i>
+          <span><strong>Dica:</strong> Toque no botão do produto para abrir o app oficial da Shopee com frete grátis e cupons ativos.</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CONTROLES: BUSCA, FILTROS E ORDENAÇÃO -->
-  <section class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-4">
-    <div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 bg-brand-card p-3 sm:p-4 rounded-2xl border border-brand-border">
+  <section class="max-w-7xl mx-auto w-full px-3 sm:px-6 lg:px-8 py-2 sm:py-4">
+    <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2.5 sm:gap-4 bg-brand-card p-3 sm:p-4 rounded-2xl border border-brand-border">
       
       <div class="relative flex-1">
         <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400"></i>
         <input 
           type="text" 
           id="searchInput" 
+          aria-label="Buscar produtos, organizadores, utilidades" 
           placeholder="Buscar produtos, organizadores, utilidades..." 
-          class="w-full bg-brand-dark border border-brand-border rounded-xl pl-10 pr-4 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 transition"
+          class="w-full bg-brand-dark border border-brand-border rounded-xl pl-10 pr-4 py-2.5 text-xs sm:text-sm text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 transition"
           oninput="handleSearch()"
         >
       </div>
 
       <!-- Filtro de Ordenação Estilizado -->
-      <div class="flex items-center gap-2">
-        <span class="text-xs text-gray-400 font-medium whitespace-nowrap">Ordenar:</span>
-        <div class="relative inline-block">
+      <div class="flex items-center justify-between sm:justify-end gap-2 pt-1 sm:pt-0 border-t sm:border-t-0 border-brand-border/40">
+        <span class="text-xs text-gray-400 font-medium whitespace-nowrap">Ordenar por:</span>
+        <div class="relative inline-block flex-1 sm:flex-initial">
           <select 
             id="sortSelect" 
-            class="appearance-none bg-brand-dark text-gray-200 border border-brand-border rounded-xl pl-3.5 pr-9 py-2 text-xs font-medium focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition cursor-pointer hover:border-gray-600 shadow-sm"
+            aria-label="Ordenar produtos" 
+            class="w-full sm:w-auto appearance-none bg-brand-dark text-gray-200 border border-brand-border rounded-xl pl-3.5 pr-9 py-2 text-xs font-medium focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition cursor-pointer hover:border-gray-600 shadow-sm"
             onchange="handleSort()"
           >
-            <option value="relevance" class="bg-[#161822] text-gray-200 py-1.5">Mais Vendidos</option>
+            <option value="featured" class="bg-[#161822] text-gray-200 py-1.5" selected>Destaques PartShop</option>
+            <option value="sales" class="bg-[#161822] text-gray-200 py-1.5">Mais Vendidos</option>
             <option value="price-asc" class="bg-[#161822] text-gray-200 py-1.5">Menor Preço</option>
             <option value="price-desc" class="bg-[#161822] text-gray-200 py-1.5">Maior Preço</option>
             <option value="rating" class="bg-[#161822] text-gray-200 py-1.5">Melhor Avaliados</option>
@@ -237,24 +240,24 @@
       </div>
     </div>
 
-    <nav aria-label="Categorias de produtos" class="flex items-center gap-2 overflow-x-auto custom-scrollbar py-3 mt-2" id="categoryChips">
+    <nav aria-label="Categorias de produtos" class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto custom-scrollbar py-2.5 sm:py-3 mt-1 sm:mt-2 -mx-3 px-3 sm:mx-0 sm:px-0" id="categoryChips">
     </nav>
   </section>
 
   <!-- GRADE DE PRODUTOS -->
-  <main class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6 flex-1">
-    <div class="flex items-center justify-between mb-6">
+  <main class="max-w-7xl mx-auto w-full px-3 sm:px-6 lg:px-8 py-4 sm:py-6 flex-1">
+    <div class="flex items-center justify-between mb-4 sm:mb-6">
       <div class="flex items-center gap-2">
-        <h3 class="font-bold text-lg text-white" id="productsCountTitle">Carregando catálogo...</h3>
+        <h3 class="font-bold text-base sm:text-lg text-white" id="productsCountTitle">Carregando catálogo...</h3>
         <span id="activeFilterBadge" class="hidden text-xs bg-purple-900/50 text-purple-300 border border-purple-500/30 px-2.5 py-0.5 rounded-full"></span>
       </div>
-      <span class="text-xs text-gray-500 flex items-center gap-1">
+      <span class="text-[11px] sm:text-xs text-gray-500 flex items-center gap-1">
         <i data-lucide="refresh-cw" class="w-3 h-3 text-emerald-400"></i> Atualizado em tempo real
       </span>
     </div>
 
-    <!-- Container dos Cards -->
-    <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+    <!-- Container dos Cards: 2 colunas no celular, 3 em tablet, 4 em desktop -->
+    <div id="productGrid" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5">
     </div>
 
     <!-- Botão Carregar Mais (Paginação sob Demanda) -->
@@ -295,14 +298,22 @@
         </p>
       </div>
       <div class="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
-        <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm px-6 py-3.5 rounded-2xl shadow-lg transition">
+        <button 
+          type="button" 
+          onclick="showToast('Grupo VIP no WhatsApp em breve! Fique atento às ofertas.')" 
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-emerald-600/90 hover:bg-emerald-600 text-white font-bold text-sm px-6 py-3.5 rounded-2xl shadow-lg transition cursor-pointer"
+        >
           <i data-lucide="message-circle" class="w-4 h-4"></i>
-          Entrar no WhatsApp VIP
-        </a>
-        <a href="https://t.me" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-sky-600 hover:bg-sky-500 text-white font-bold text-sm px-6 py-3.5 rounded-2xl shadow-lg transition">
+          Entrar no WhatsApp VIP (Em Breve)
+        </button>
+        <button 
+          type="button" 
+          onclick="showToast('Canal no Telegram em breve! Fique atento às ofertas.')" 
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-sky-600/90 hover:bg-sky-600 text-white font-bold text-sm px-6 py-3.5 rounded-2xl shadow-lg transition cursor-pointer"
+        >
           <i data-lucide="send" class="w-4 h-4"></i>
-          Canal do Telegram
-        </a>
+          Canal do Telegram (Em Breve)
+        </button>
       </div>
     </div>
   </section>
@@ -325,7 +336,24 @@
         <p><strong>Aviso de Transparência:</strong> Como participante do Programa de Afiliados Shopee, podemos receber comissões por compras qualificadas através dos links indicados, sem custo adicional para o comprador.</p>
       </div>
     </div>
+
+    <!-- Linha de Copyright -->
+    <div class="max-w-7xl mx-auto mt-8 pt-6 border-t border-brand-border/40 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-gray-500">
+      <p>© 2026 PartShop • Curadoria dos Melhores Achados Shopee</p>
+      <p class="text-gray-600 text-[10px]">Preços e cupons sujeitos a alteração no app da Shopee.</p>
+    </div>
   </footer>
+
+  <!-- BOTÃO VOLTAR AO TOPO (BACK TO TOP) -->
+  <button 
+    id="btnBackToTop" 
+    onclick="scrollToTop()" 
+    aria-label="Voltar ao topo da página" 
+    title="Voltar ao topo" 
+    class="fixed bottom-6 left-6 z-40 bg-brand-card/90 hover:bg-purple-600 text-gray-300 hover:text-white p-3.5 rounded-2xl border border-brand-border hover:border-purple-500 shadow-2xl backdrop-blur-md transition-all duration-300 opacity-0 pointer-events-none translate-y-4 hover:scale-105 active:scale-95 group cursor-pointer"
+  >
+    <i data-lucide="arrow-up" class="w-5 h-5 transition-transform group-hover:-translate-y-0.5"></i>
+  </button>
 
   <!-- TOAST -->
   <div id="toast" class="fixed bottom-6 right-6 z-50 bg-emerald-600 text-white px-4 py-3 rounded-2xl shadow-2xl flex items-center gap-3 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">

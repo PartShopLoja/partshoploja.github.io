@@ -1,30 +1,52 @@
-    body {
-      background-color: #0b0c10;
-      color: #e2e8f0;
-      -webkit-font-smoothing: antialiased;
-    }
-    .glass-nav {
-      background: rgba(16, 18, 27, 0.85);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-    }
-    .custom-scrollbar::-webkit-scrollbar {
-      width: 6px;
-      height: 6px;
-    }
-    .custom-scrollbar::-webkit-scrollbar-track {
-      background: #11131a;
-    }
-    .custom-scrollbar::-webkit-scrollbar-thumb {
-      background: #2a2e40;
-      border-radius: 9999px;
-    }
+* {
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  background-color: #0b0c10;
+  color: #e2e8f0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.glass-nav {
+  background: rgba(16, 18, 27, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #11131a;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #2a2e40;
+  border-radius: 9999px;
+}
+
+/* Oculta scrollbar visual em mobile nas categorias para parecer app nativo */
+@media (max-width: 640px) {
+  #categoryChips::-webkit-scrollbar {
+    display: none;
+  }
+  #categoryChips {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
 /* Ajuste de Dropdowns no Tema Escuro */
 #sortSelect {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  color-scheme: dark; /* Força o menu desdobrável nativo a respeitar o tema escuro */
+  color-scheme: dark;
 }
 
 #sortSelect option {
